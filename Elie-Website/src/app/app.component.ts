@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnectableObservable } from 'rxjs';
 import { MoviesApiService } from './services/movies-api.service';
 
 @Component({
@@ -9,12 +10,12 @@ import { MoviesApiService } from './services/movies-api.service';
 export class AppComponent {
   title = 'Elie-Website';
 
-  movieData = null;
+  movieData:any[] = [];
   constructor(private movies_api:MoviesApiService) {}
 
   ngOnInit() {
-    this.movies_api.getMovies().subscribe((data: any)=>{
-      this.movieData = data;
+    this.movies_api.movie_details.subscribe((data: any)=>{
+      this.movieData.push(data)
       console.log(this.movieData)
     });
   }
