@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MoviesApiService } from './services/movies-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Elie-Website';
+
+  movieData = null;
+  constructor(private movies_api:MoviesApiService) {}
+
+  ngOnInit() {
+    this.movies_api.getMovies().subscribe((data: any)=>{
+      this.movieData = data;
+      console.log(this.movieData)
+    });
+  }
 }
