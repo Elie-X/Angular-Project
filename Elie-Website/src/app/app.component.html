@@ -1,6 +1,11 @@
 <div class="container">
-  <p *ngFor='let movie of movieData'>
+  <!--<p *ngFor='let movie of movieData'>
     {{movie.title}}
-  </p>
+  </p>-->
+  <h1>Angular GANG</h1>
+
+  <div *ngFor="let x of data | async">
+    {{ x | json}}  
+  </div>
   <router-outlet></router-outlet>
 </div>
