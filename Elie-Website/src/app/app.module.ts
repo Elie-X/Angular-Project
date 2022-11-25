@@ -13,6 +13,7 @@ import { ParametersComponent } from './components/parameters/parameters.componen
 import { VideoPageComponent } from './components/video-page/video-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VideoListComponent } from './components/video-list/video-list.component';
+import { VideoPreviewComponent } from './components/video-preview/video-preview.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { VideoListComponent } from './components/video-list/video-list.component
     FavoritesComponent,
     ParametersComponent,
     VideoPageComponent,
-    VideoListComponent
+    VideoListComponent,
+    VideoPreviewComponent
   ],
   imports: [
     BrowserModule,

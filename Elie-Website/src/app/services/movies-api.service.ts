@@ -23,7 +23,7 @@ export class MoviesApiService {
     for (let id of this.ids) {
       let tempMovie = Object.create(initMovie);
       this.getMovieDetails(id).subscribe((data: any) => {
-        tempMovie.backdrop_path = data.backdrop_path;
+        tempMovie.backdrop_path = "https://image.tmdb.org/t/p/original/" + data.backdrop_path;
         tempMovie.title = data.title;
         tempMovie.id = data.id;
       })

@@ -1,1 +1,6 @@
-<p>video-list works!</p>
+<div class="video-list">
+    <app-video-preview
+        *ngFor="let movie of movie_list"
+        [movie] = "movie"
+    ></app-video-preview>
+</div>

@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent
   }, {
-    path: 'VideoPlayer', component: VideoPageComponent
+    path: 'VideoPage', component: VideoPageComponent
   }, {
     path: 'Favorites', component: FavoritesComponent
   }, {

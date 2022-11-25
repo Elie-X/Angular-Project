@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { initMovie, Movie } from 'src/app/movie';
 import { VideoPlayerComponent } from '../video-player/video-player.component';
 
 @Component({
@@ -7,10 +8,16 @@ import { VideoPlayerComponent } from '../video-player/video-player.component';
   styleUrls: ['./video-page.component.scss']
 })
 export class VideoPageComponent implements OnInit {
-
-  constructor() { }
+  movie!: Movie;
+  constructor() {
+   }
 
   ngOnInit(): void {
+    if ("data" in history.state) {
+      this.movie = history.state.data.movie;
+    } else {
+      this.movie = initMovie;
+    }
   }
 
 }
