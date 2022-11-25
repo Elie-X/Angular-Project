@@ -15,15 +15,21 @@ export class AppComponent {
   movieData: any;*/
 
   //posts: Movie | undefined;
-  data: any;
+  movie!: Observable<any>;
 
   constructor(private movies_api:MoviesApiService) {
   }
 
   ngOnInit() {
-    this.movies_api.movie_details.subscribe((data: any) => {
+    /*this.movies_api.movie_details.subscribe((data: any) => {
       //this.posts = data;
-      this.data = data;
-    });
+      this.movie = data;
+      console.log(data)
+    });*/
+    this.movies_api.getMovieDetails(53400).subscribe((data: any) => {
+      console.log(data)
+    })
   }
+
+
 }

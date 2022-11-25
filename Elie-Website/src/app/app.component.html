@@ -4,8 +4,8 @@
   </p>-->
   <h1>Angular GANG</h1>
 
-  <div *ngFor="let x of data | async">
-    {{ x | json}}  
+  <div *ngIf="movie | async">
+    {{ movie | json }}  
   </div>
   <router-outlet></router-outlet>
 </div>
