@@ -12,6 +12,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { ParametersComponent } from './components/parameters/parameters.component';
 import { VideoPageComponent } from './components/video-page/video-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VideoListComponent } from './components/video-list/video-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     VideoPlayerComponent,
     FavoritesComponent,
     ParametersComponent,
-    VideoPageComponent
+    VideoPageComponent,
+    VideoListComponent
   ],
   imports: [
     BrowserModule,
