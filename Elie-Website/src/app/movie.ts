@@ -1,6 +1,5 @@
 export interface Movie {
     id: number;
-    userId: number;
+    backdrop_path: string;
     title: string;
-    body: string;
 }
