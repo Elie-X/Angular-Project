@@ -1,0 +1,11 @@
+<div class="video-preview">
+
+<p><a 
+    routerLink="/VideoPage" 
+    [state] = "{ data: {movie}}">
+        {{ movie.title }}
+    </a>
+</p>
+<img src="{{ movie.backdrop_path }}">
+
+</div>
