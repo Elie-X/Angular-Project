@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MoviesApiService } from './services/movies-api.service';
 import { Observable, map } from 'rxjs';
-import { Movie } from './movie';
+import { initMovie, Movie } from './movie';
 
 @Component({
   selector: 'app-root',
@@ -11,24 +11,16 @@ import { Movie } from './movie';
 })
 
 export class AppComponent {
-  title = 'Elie-Website';/*
-  movieData: any;*/
+  title = 'Elie-Website';
 
-  //posts: Movie | undefined;
-  movie!: Observable<any>;
+  movie_list!: Movie[];
 
   constructor(private movies_api:MoviesApiService) {
   }
 
   ngOnInit() {
-    /*this.movies_api.movie_details.subscribe((data: any) => {
-      //this.posts = data;
-      this.movie = data;
-      console.log(data)
-    });*/
-    this.movies_api.getMovieDetails(53400).subscribe((data: any) => {
-      console.log(data)
-    })
+    this.movie_list = this.movies_api.getMovies()
+    console.log(this.movie_list)
   }
 
 
