@@ -30,6 +30,10 @@ export class MoviesApiService {
         }
         tempMovie.title = data.title;
         tempMovie.id = data.id;
+        tempMovie.overview = data.overview;
+        tempMovie.poster_path = data.poster_path;
+        tempMovie.release_date = data.release_date;
+        tempMovie.runtime = data.runtime;
       })
       movieList.push(tempMovie);
     }
