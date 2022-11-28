@@ -6,7 +6,7 @@ import { Movie } from 'src/app/movie';
 @Component({
   selector: 'app-video-player',
   templateUrl: './video-player.component.html',
-  styleUrls: ['./video-player.component.scss']
+  styleUrls: ['./video-player.component.scss'],
 })
 export class VideoPlayerComponent implements OnInit {
   @Input() movie!: Movie;
@@ -14,6 +14,7 @@ export class VideoPlayerComponent implements OnInit {
   mp4_src!: string;
   ogg_src!: string;
   webm_src!: string;
+  red = "red";
   constructor(private api:VgApiService) { }
 
   ngOnInit(): void {
