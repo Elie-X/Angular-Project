@@ -14,4 +14,9 @@ export class VideoPreviewComponent implements OnInit {
     console.log(this.movie.backdrop_path)
   }
 
+  saveData() {
+    console.log("boop")
+    localStorage.removeItem('currentMovie');
+    localStorage.setItem('currentMovie', JSON.stringify(this.movie));
+  }
 }

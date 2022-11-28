@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { initMovie, Movie } from 'src/app/movie';
 
@@ -15,6 +16,8 @@ export class VideoPageComponent implements OnInit {
   ngOnInit(): void {
     if ("data" in history.state) {
       this.movie = history.state.data.movie;
+    } else if (localStorage.getItem("currentMovie")) {
+      this.movie = JSON.parse(localStorage.getItem("currentMovie") || "{}");
     } else {
       this.movie = initMovie;
     }
