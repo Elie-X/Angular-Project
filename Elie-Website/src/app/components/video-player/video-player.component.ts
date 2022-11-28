@@ -24,7 +24,6 @@ export class VideoPlayerComponent implements OnInit {
 
   onPlayerReady(api: VgApiService) {
     this.api = api;
-
     this.api.volume = 0.2;
   }
 
