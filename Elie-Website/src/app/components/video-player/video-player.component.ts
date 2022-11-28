@@ -18,7 +18,6 @@ export class VideoPlayerComponent implements OnInit {
 
   ngOnInit(): void {
     this.mp4_src = "../../../assets/videos/" + this.movie.id + ".mp4";
-    //this.vgMedia.volume = 0.5
   }
 
   
