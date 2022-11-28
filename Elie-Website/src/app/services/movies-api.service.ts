@@ -10,7 +10,7 @@ import { TestScheduler } from 'rxjs/testing';
 export class MoviesApiService {
 
   //TODO: Générer la liste des vidéos disponibles avec le dossier comprenant les vidéos
-  ids:number[] = [53400, 67713, 20529, 13707];
+  ids:number[] = [53400, 67713, 13707, 151471];
   
   
 
@@ -23,7 +23,11 @@ export class MoviesApiService {
     for (let id of this.ids) {
       let tempMovie = Object.create(initMovie);
       this.getMovieDetails(id).subscribe((data: any) => {
-        tempMovie.backdrop_path = "https://image.tmdb.org/t/p/original/" + data.backdrop_path;
+        if (data.backdrop_path === null) {
+          tempMovie.backdrop_path = "../../assets/photos/default.png"
+        } else {
+          tempMovie.backdrop_path = "https://image.tmdb.org/t/p/original/" + data.backdrop_path
+        }
         tempMovie.title = data.title;
         tempMovie.id = data.id;
       })
