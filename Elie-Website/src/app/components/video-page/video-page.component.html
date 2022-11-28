@@ -6,5 +6,11 @@
     Durée : {{ movie.runtime }} minutes
 
 </p>
-<app-video-player [movie] = "movie"></app-video-player>
+<app-button
+    color="{{ showVideo ? 'red' : 'green' }}"
+    text="{{ showVideo ? 'Hide' : 'Show' }}"
+    (btnClick)="toggleShowVideo()"
+    ></app-button>
+    <br>
+<app-video-player *ngIf="showVideo" [movie] = "movie"></app-video-player>
 <a routerLink="/">Go Back</a>

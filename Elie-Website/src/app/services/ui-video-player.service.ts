@@ -5,14 +5,14 @@ import {Observable, Subject} from 'rxjs';
   providedIn: 'root'
 })
 export class UiVideoPlayerService {
-  private showAddTask: boolean = false;
+  private showVideo: boolean = false;
   private subject = new Subject<any>();
  
   constructor() { }
 
-  toggleAddTask(): void {
-    this.showAddTask = !this.showAddTask;
-    this.subject.next(this.showAddTask);
+  toggleShowVideo(): void {
+    this.showVideo = !this.showVideo;
+    this.subject.next(this.showVideo);
   }
 
   onToggle(): Observable<any> {
