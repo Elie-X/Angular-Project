@@ -1,3 +1,10 @@
 <h2>{{ movie.title }}</h2>
+<h3>{{ movie.overview }}</h3>
+<p>
+    Date de publication : {{ movie.release_date }}
+    <br>
+    Durée : {{ movie.runtime }} minutes
+
+</p>
 <app-video-player [movie] = "movie"></app-video-player>
 <a routerLink="/">Go Back</a>
