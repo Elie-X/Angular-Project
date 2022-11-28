@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { initMovie, Movie } from 'src/app/movie';
 import { Subscription } from "rxjs";
 import { UiVideoPlayerService } from 'src/app/services/ui-video-player.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-video-page',
@@ -12,7 +13,7 @@ export class VideoPageComponent implements OnInit {
   movie!: Movie;
   showVideo!: boolean;
   subscription!: Subscription;
-  constructor(private uiVideoPlayerService: UiVideoPlayerService) {
+  constructor(private uiVideoPlayerService: UiVideoPlayerService, private location: Location) {
     this.subscription = this.uiVideoPlayerService.onToggle().subscribe((value) => (this.showVideo = value));
    }
 

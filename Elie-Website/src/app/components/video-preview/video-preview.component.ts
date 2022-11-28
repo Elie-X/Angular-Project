@@ -15,7 +15,6 @@ export class VideoPreviewComponent implements OnInit {
   }
 
   saveData() {
-    console.log("boop")
     localStorage.removeItem('currentMovie');
     localStorage.setItem('currentMovie', JSON.stringify(this.movie));
   }

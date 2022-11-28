@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { VideoPreviewComponent } from './components/video-preview/video-preview.component';
 import { ButtonComponent } from './components/button/button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ButtonComponent } from './components/button/button.component';
     VideoPageComponent,
     VideoListComponent,
     VideoPreviewComponent,
-    ButtonComponent
+    ButtonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
