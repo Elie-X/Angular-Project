@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { initMovie, Movie } from 'src/app/movie';
-import { VideoPlayerComponent } from '../video-player/video-player.component';
+
 
 @Component({
   selector: 'app-video-page',
